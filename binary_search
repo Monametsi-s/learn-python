@@ -1,0 +1,28 @@
+import time
+import test_func as t
+list_1 = [1, 2, 3, 4, 5, 6, 7]
+list = [i for i in range(10000)]
+
+
+
+def search_binary(list, target):
+    """find and return index of item 
+    using binry search"""
+    lb = 0
+    ub = len(list)
+    while True:
+        if lb == ub:
+            return -1
+        mid_index = (lb + ub) // 2
+        if target == list[mid_index]:
+            return mid_index
+        elif target < list[mid_index]:
+            ub = mid_index
+        else:
+            lb = mid_index + 1
+
+
+t0 = time.process_time_ns()
+index = search_binary(list, 805600)
+t1 = time.process_time_ns()
+print("time taken to find {1} for binary search is {0:.4f}".format((t1 - t0), index))
