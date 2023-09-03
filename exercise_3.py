@@ -27,7 +27,7 @@ tess = Turtle()
 tess.left(3645)
 
 wn.mainloop()
-'''
+
 #5 
 xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 
@@ -79,4 +79,54 @@ t_new.left(-86)
 wn.mainloop()
 
 #9 You would need an angle of 360/18 = 20 degrees
+
 #11 Write a program to write a star
+wn = Screen()
+star = Turtle()
+angle = -(180-36)
+
+star.penup()            # Centrering the star
+star.backward(100)
+star.left(90)
+star.forward(50)
+star.right(90)
+star.pendown()
+star.pensize(3)        # Making the star thick
+
+for i in range(5):     #Creating the star
+    star.forward(200)
+    star.left(angle)
+star.hideturtle()
+
+wn.mainloop()
+'''
+#12 Drawing face of the clock
+
+def clock_face():
+
+    wn = Screen()
+    wn.bgcolor("lightgreen")
+    
+    totti = Turtle()
+    totti.color("blue")
+    totti.shape("turtle")
+    totti.pensize(2)
+    totti.penup()
+    for i in range(12):
+        totti.forward(100)
+        totti.pendown()
+        totti.forward(15)
+        totti.penup()
+        totti.forward(15)
+        totti.stamp()
+        totti.backward(130)
+        totti.left(30)
+    wn.mainloop() 
+
+# 13 When you ask for its type, what do you get?
+turtle_1 = Turtle()
+print(type(turtle_1)) #Output <class 'turtle.Turtle'>
+
+
+#14 Collective noun for turtles
+# - Bale 
