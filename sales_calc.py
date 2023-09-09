@@ -64,7 +64,7 @@ for product, quantity, price in sales_data:
     product_revenues[product] = product_revenues.get(product, 0) + revenue
 print(product_revenues)
 
-max_product = max(product_revenues, key= product_revenues.get)
+max_product = max(product_revenues, key= product_revenues.get) # type: ignore
 print(f"{max_product} generated the maximum revenue")
 
 
